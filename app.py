@@ -2,10 +2,8 @@ from cProfile import label
 from turtle import st
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
-from tkinter import font
 import ast 
 st.markdown("""<style>.stApp {background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); ;} .blockcontainer{background: rgba(0,0,0,0.3); padding: 2rem; border-radius: 15px;}</style>""", unsafe_allow_html=True)
 def neon_metric(label, value):
