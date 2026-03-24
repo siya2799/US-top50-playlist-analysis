@@ -13,7 +13,7 @@ st.set_page_config(page_title="🎧 United States Top 50 Playlist Analytics Dash
 st.title("United States Top 50 Playlist Performance and Song Popularity Trend Analysis Dashboard")
 # Load the dataset
 url ="https://github.com/siya2799/US-top50-playlist-analysis/blob/main/data/Atlantic_United_States.csv"
-df = pd.read_csv(url, on_bad_lines='skip', engine='python')
+df = pd.read_csv(url)
 #Convert the 'Date' column to datetime format
 df['date'] = pd.to_datetime(df['date'])
 #Create "primary artist" column by extracting the first artist from the 'artist' column
