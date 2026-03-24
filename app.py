@@ -136,7 +136,7 @@ with tab2:
 #Tab 3: Popularity Analysis
 with tab3:
     st.subheader("Popularity vs Rank Analysis")
-    fig=px.scatter(analysis_df, x='popularity_trend', y='average_rank', title='Popularity vs Rank Analysis', trendline='ols',color='popularity_trend',size='popularity_trend', hover_data=['song_id', 'primary_artist', 'popularity_trend'])
+    fig=px.scatter(analysis_df, x='popularity_trend', y='average_rank', title='Popularity vs Rank Analysis',color='popularity_trend',size='popularity_trend', hover_data=['song_id', 'primary_artist', 'popularity_trend'])
     fig.update_yaxes(autorange='reversed')
     fig.update_layout(plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)', xaxis_title='Popularity Trend', yaxis_title='Average Rank', font=dict(color='white'), legend=dict(font=dict(color='white'), yanchor='top', y=1, xanchor='left', x=1.02))
     st.plotly_chart(fig, use_container_width=True)
@@ -148,6 +148,6 @@ with tab4:
     fig.update_layout(plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)', xaxis_title='Explicit', yaxis_title='Rank', font=dict(color='white'), legend=dict(font=dict(color='white'), yanchor='top', y=1, xanchor='left', x=1.02))
     st.plotly_chart(fig, use_container_width=True)
     st.subheader("Duration vs Popularity Trend Analysis")
-    fig=px.scatter(analysis_df, x='duration_mins', y='popularity_trend', title='Duration vs Popularity Trend', trendline='ols', color='popularity_trend', size='popularity_trend', hover_data=['song_id', 'primary_artist', 'duration_mins'])
+    fig=px.scatter(analysis_df, x='duration_mins', y='popularity_trend', title='Duration vs Popularity Trend', color='popularity_trend', size='popularity_trend', hover_data=['song_id', 'primary_artist', 'duration_mins'])
     fig.update_layout(plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)', xaxis_title='Duration (minutes)', yaxis_title='Popularity Trend', font=dict(color='white'), legend=dict(font=dict(color='white'), yanchor='top', y=1, xanchor='left', x=1.02))
     st.plotly_chart(fig, use_container_width=True)
